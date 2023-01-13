@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function init(){
+        alert(document.cookie)
+        }
+        function changeBodyBg(color){
+            document.body.style.background = color;
+        }
+        function setCookie(nCookie,nValue){
+          document.cookie=nCookie+"="+nValue+";";
+
+        }
+        function getCookie(nCookie){
+          let name=nCookie+"=";
+          let c=document.cookie;
+          let search=c.split(";");
+          for(let i=0;i<search.length;i++){
+              let r=search[i];
+              if(r.indexOf(name)==0){
+                  return r.substring(name.length,r.length)
+              }
+          }
+        }
+        function getVale(){
+            let val=getCookie("color")
+            changeBodyBg(val);
+        }
+         window.onload=()=>{init()};
+
+    </script>
+</head>
+<body>
+    <form id="MyForm">
+        <input type="radio"  name="color" value="Lavender" onclick="setCookie('color','lavender')">Lavender
+        <input type="radio"  name="color" value="white" onclick="setCookie('color','white')">White
+        <input type="radio"  name="color" value="green" onclick="setCookie('color','green')">Green
+        <input type="radio" name="color" value="black" onclick="setCookie('color','black')">Black
+        <input type="radio"   name="color" value="Orange" onclick="setCookie('color','orange')" >Orange
+        <button type="button" onclick="getVale()" >Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    background-size: cover;
+
+    font-family: Lucida Handwriting;
+}
+.lors{
+    width: 26% ;
+    height: 60%;
+    background-color: black;
+    color: #fff;
+    top:50% ;
+    left :35% ;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    padding: 70px  30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 8px 10px 8px #888888;
+
+}
+.lors button{
+    width:80%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #E23C52;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    font-family: Lucida Handwriting;
+}
+.lors button:hover{
+    background: #BB2F41;
+}
+
+.sign{
+    width: 26% ;
+    height: 60%;
+    background-color: black;
+    color: #fff;
+    top:50% ;
+    left :70% ;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    padding: 70px  30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 8px 10px 8px #888888;
+    display: none;
+    transition: 1s ease-in-out;
+}
+.sign input[type="text"], input[type="password"]{
+    background-color:black;
+    border: 3px solid #E23C52 ;
+    outline: none;
+    text-align: center;
+    height:40px ;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: 0.25s;
+    font-family: Lucida Handwriting;
+
+
+}
+
+.sign input[type="radio"]{
+    text-color: #888888;
+    background-color: #E23C52;
+    font-size: 3px;
+}
+
+.login{
+    width: 26% ;
+    height: 60%;
+    background-color: black;
+    color: #fff;
+    top:50% ;
+    left :70% ;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    padding: 70px  30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 8px 10px 8px #888888;
+    transition: 1s ease-in-out;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.login p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+}
+.login input{
+    width:80%;
+    margin-bottom: 20px;
+}
+.sign input{
+    width:80%;
+    margin-bottom: 20px;
+}
+.sign input[type="password"]:hover,input[type="text"]:hover{
+    width:100%;
+
+}
+.login input[type="text"],.login input[type="password"]{
+    background-color:black;
+    border: 3px solid #E23C52 ;
+    outline: none;
+    text-align: center;
+    height:40px ;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: 0.25s;
+    font-family: Lucida Handwriting;
+
+
+}
+.login input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #E23C52;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    font-family: Lucida Handwriting;
+}
+.login input[type="submit"]:hover{
+    cursor: pointer;
+    background:  #BB2F41 ;
+    color: black;
+
+}
+.sign input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #E23C52;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    font-family: Lucida Handwriting;
+}
+.sign input[type="submit"]:hover{
+    cursor: pointer;
+    background: #BB2F41 ;
+    color: black;
+
+}
+.login a{
+    text-decoration: none;
+    font-size: 14px;
+    line-height:20px ;
+    color: darkgray;
+
+}
+.login a:hover {
+    color: #E23C52;
+}
+.login input[type="text"]:hover, input[type="password"]:hover{
+    width:100%;
+}
+.circle{
+    height: 1200px;
+    width:1200px;
+    background-color: #E23C52;
+    border-radius: 50%;
+    box-shadow: 0 15px 20px 0;
+    z-index: revert;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.circle2{
+    height:500px;
+    width:500px;
+    background-color: #E23C52;
+    border-radius: 50%;
+    box-shadow: 0 15px 20px 0;
+    position: absolute;
+    left: 10%;
+    top: -10%;
+}

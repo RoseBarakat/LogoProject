@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>phpFileWithCookies</title>
+</head>
+<?php
+// define variables and set to empty values
+$favColor= "";
+$valCookie ='white';
+$hi='hidden';
+$vi='visible';
+$flag = false;
+$flag2 = false;
+
+if (isset($_COOKIE['favColor']))
+{ $valCookie=$_COOKIE['favColor'];
+    $flag = true;}
+else
+{
+    $flag = false;}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty($_POST["color"])) {
+        $genderErr = "Gender is required";
+    } else {
+        $favColor = test_input($_POST["color"]);
+        setcookie('favColor',$favColor );
+        $valCookie=$favColor;
+        $flag2=true;
+        header("Refresh:0");
+        $flag2=true;
+
+    }
+
+}
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+
+}
+?>
+<body style="background-color: <?php echo $valCookie ">
+
+
+<span <?php if (!$flag) echo$hi; ?>>
+<h1 class="container1" id="intro">Welcome To your Web Page</h1>
+</span>
+
+<span <?php if ($flag) echo$hi; ?> >
+<dev class="container1">
+
+
+
+
+
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <table>
+        <tr>
+            <td>
+                <h1>
+                    Please Chose Your Fav Color 😊
+                </h1>
+                <br> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>Color:
+
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="white") echo "checked"; id='whiteCol' value='white' checked>
+                <label >White</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="red") echo "checked";?> value='red' id='redCol'>
+                <label >Red</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="blue") echo "checked";?> value='blue' id='blueCol'>
+                <label >Blue</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="yellow") echo "checked";?> value='yellow' id='yellowCol'>
+                <label >Yellow</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="green") echo "checked";?> value='green' id='greenCol'>
+                <label >Green</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="purple") echo "checked";?> value='purple' id='purpleCol' >
+                <label >Purple</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="pink") echo "checked";?> value='pink' id=pinkCol'>
+                <label >Pink</label>
+                <input type='radio' name='color' <?php if (isset($favColor) && $favColor=="brown") echo "checked";?> value=brown' id='brownCol' >
+                <label >Brown</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="Submit">
+            </td>
+        </tr>
+
+    </table>
+</>
+</dev>
+
+
+
+</span>
+
+
+</body>
+
+</html>
